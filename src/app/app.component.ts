@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router';
+import { MaquinaComponent } from './components/maquina/maquina.component';
+import { TopbarComponent } from './components/topbar/topbar.component';
+import { ResumenComponent } from './components/resumen/resumen.component';
+import { MaterializeModule } from 'angular2-materialize';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,MaquinaComponent,TopbarComponent,ResumenComponent,RouterModule, RouterLink, RouterLinkActive],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angular-dashboard-maquinaexpress';
+  title = 'Dashboard';
 }
