@@ -1,0 +1,53 @@
+<header>
+    <app-maquina></app-maquina>
+    <app-topbar></app-topbar>
+</header>
+
+<main class="container">
+    <div id="modal1" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>Agregar Maquina</h4>
+            <form>
+                <div class="row">
+                    <div class="input-field col s8">
+                        <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                        <label for="first_name">Alias</label>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <select>
+                            <option value="" disabled selected>Elige tu Opcion</option>
+                            <option value="1">Dismaser</option>
+                            <option value="2">General Electric</option>
+                            <option value="3">Aurora</option>
+                        </select>
+                        <label>Marca</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <select>
+                            <option value="" disabled selected>Elige tu Opcion</option>
+                            <option value="1">B5053</option>
+                            <option value="2">DX7090</option>
+                            <option value="3">AB7090</option>
+                        </select>
+                        <label>Modelo</label>
+                    </div>                    
+                </div>
+                <div class="row">
+                    <div class="input-field col s8">
+                        <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                        <label for="first_name">Cola MQ</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a class="modal-close waves-effect waves-green btn-flat">Agregar</a>
+            <a class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+        </div>
+    </div>
+
+    <router-outlet />
+</main>

@@ -1,0 +1,9 @@
+@media only screen and (min-width: 993px) {
+    body.has-fixed-sidenav {
+        padding-left: 300px
+    }
+
+    .container {
+        width: 80%
+    }
+}

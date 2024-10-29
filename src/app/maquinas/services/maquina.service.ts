@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Maquina } from '../models/maquina';
 import { Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MaquinaService {
+  [x: string]: any;
 
   private maquinas: Maquina[]=[
     {
@@ -39,7 +41,7 @@ export class MaquinaService {
   ];
 
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
   //cambiar por url spring
   listmaquinas(): Observable<Maquina[]>{
     var lista : Maquina[]= [];
@@ -52,11 +54,18 @@ export class MaquinaService {
       estado:"",
       url:""}));
     return of(lista);
+
+    
   }
 
   findbyId(id:number): Observable<any>{ 
     var maquina=this.maquinas.find(maquina => maquina.id==id);
     return of(maquina);
   }
+
+  findAll(){
+    return this.http.get("localhost:8090/api/maquina");
+  }
+  
 
 }

@@ -1,1 +1,83 @@
-<p>product works!</p>
+<div class="card">
+    <div class="card-metrics card-metrics-toggle card-metrics-centered">
+        <div class="row">
+            <div class="input-field col s4">
+                <input value="" id="first_name2" type="text" class="validate">
+                <label class="active" for="first_name2">Nombre producto</label>
+            </div>
+
+            <div class="input-field col s1">
+                <input value="" id="first_name2" type="text" class="validate">
+                <label class="active" for="first_name2">Precio</label>
+            </div>
+
+            <div class="input-field col s2">
+                <input value="" id="first_name2" type="text" class="validate">
+                <label class="active" for="first_name2">Cantidad</label>
+            </div>
+
+
+            <div class="input-field col s2">
+                <input value="" id="first_name2" type="text" class="validate">
+                <label class="active" for="first_name2">Imagen</label>
+            </div>
+
+            <div class="input-field col s2">
+                <input value="" id="first_name2" type="text" class="validate">
+                <label class="active" for="first_name2">fecha vencimiento</label>
+            </div>
+
+            <div class="col s1">
+                <button class="btn waves-effect waves-light z-depth-5" type="submit" name="action">Save
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div>
+    @if (listproducto.length > 0) {
+    @for (producto of listproducto; track $index){
+    <div class="card">
+        <div class="card-metrics card-metrics-toggle card-metrics-centered">
+            <div class="row">
+                <div class="input-field col s4">
+                    <input value="{{producto.nombre}}" id="first_name2" type="text" class="validate">
+                    <label class="active" for="first_name2">Nombre</label>
+                </div>
+
+                <div class="input-field col s1">
+                    <input value="{{producto.precio}}" id="first_name2" type="text" class="validate">
+                    <label class="active" for="first_name2">precio</label>
+                </div>
+
+                <div class="input-field col s2">
+                    <input value={{producto.cantidad}} id="first_name2" type="text" class="validate">
+                    <label class="active" for="first_name2">cantidad</label>
+                </div>
+
+
+                <div class="input-field col s2">
+                    <input value="" id="first_name2" type="text" class="validate">
+                    <label class="active" for="first_name2">Imagen</label>
+                </div>
+
+                <div class="input-field col s2">
+                    <input value="{{producto.fechavencimiento | date :'dd/MM/yyyy'}}" id="first_name2" type="text" class="validate">
+                    <label class="active" for="first_name2">Fecha De vencimiento</label>
+                </div>
+
+                <div class="col s1">
+                    <button class="btn waves-effect waves-light z-depth-5" type="submit" name="action">Editar
+                        <i class="material-icons right">editar</i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+}
+}
+</div>
