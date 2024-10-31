@@ -11,7 +11,7 @@ export const routes: Routes = [
 @NgModule({
     imports: [
       RouterModule,
-      NgApexchartsModule // Agregar aquí
+      NgApexchartsModule
     ],
   })
   export class AppRoutingModule { }
